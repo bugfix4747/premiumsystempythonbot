@@ -10,7 +10,7 @@ import os
 class Premium(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.db = "db/premium.db"
+        self.db = "premium.db"
 
     @commands.Cog.listener()
     async def on_ready(self):
