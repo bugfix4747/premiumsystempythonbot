@@ -66,7 +66,7 @@ class Premium(commands.Cog):
 
     @staticmethod
     async def is_premium(ctx):
-        async with aiosqlite.connect("db/premium.db") as db:
+        async with aiosqlite.connect(self.db) as db:
             async with db.execute('SELECT expires_at FROM premium_system WHERE user_id = ?', (ctx.author.id,)) as cursor:
                 row = await cursor.fetchone()
                 if row is None:
