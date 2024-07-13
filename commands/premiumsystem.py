@@ -103,7 +103,7 @@ class Premium(commands.Cog):
             
             with open("premium_codes.txt", "rb") as f:
                 await ctx.author.send("⚠   Dont share this Codes", file=discord.File(f, "premium_codes.txt"))
-                os.remove("premium_codes.txt")
+            os.remove("premium_codes.txt")
             embed.description = f"Check your DMs for the list of premium codes [Total: {count}]."
         await ctx.respond(embed=embed, ephemeral=True)
 
